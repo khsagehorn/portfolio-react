@@ -1,0 +1,27 @@
+{
+  "siteContent": {
+    "mainNav": [
+      {
+        "title": "Home",
+        "link": "#home"
+      },
+      {
+        "title": "Work",
+        "link": "#work"
+      },
+      {
+        "title": "About",
+        "link": "#about"
+      }
+    ],
+    "landingPage": {
+      "heading": "K. Hunter Sagehorn",
+      "subheading": "Frontend Developer",
+      "body": "Making the Internet nicer since 2016."
+    },
+    "contactLinks": {
+      "email": "huntersagehorn@gmail.com",
+      "linkedIn": "http://www.linedin.com/in/klaushuntersagehorn"
+    }
+  }
+}

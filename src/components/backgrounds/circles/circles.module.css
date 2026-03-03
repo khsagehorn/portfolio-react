@@ -1,0 +1,50 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.container {
+  --circleWidth: 4vw;
+  --innerCircles: 12;
+  --gap: 0.25; /* how much extra space we want between images, 1 = 1 image size */
+  --baseAngle: 1turn/var(--innerCircles); /* base angle = 1 full turn divided by number of edges */
+  /* (1 + var(--gap))*var(--circleWidth) = polygon edge = img size + extra space */
+  --radius: calc(
+    0.5 * (1 + var(--gap)) * var(--circleWidth)/tan(0.5 * var(--baseAngle))
+  ); /* circle radius */
+  --animationLength: 4s;
+  --animationLengthNoUnit: 4;
+  display: grid;
+  width: calc(2 * var(--radius) + var(--circleWidth)); /* container size */
+  max-width: 600px;
+  background: transparent;
+  transform-origin: center;
+  animation: spin var(--animationLength)
+    steps(calc(24 * var(--animationLengthNoUnit)));
+  animation-iteration-count: 1;
+}
+
+.innerCircle {
+  grid-area: 1/ 1;
+  place-self: center;
+  width: var(--circleWidth);
+  aspect-ratio: 1;
+  --elementAngle: calc(var(--i) * var(--baseAngle));
+  transform: rotate(var(--elementAngle)) translate(var(--radius))
+    rotate(calc(-1 * var(--elementAngle)));
+  border-radius: 100%;
+  background-color: #3ad;
+}
