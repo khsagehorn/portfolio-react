@@ -1,0 +1,13 @@
+.section {
+  font-family: var(--font-labrada-regular);
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-style: italic;
+  }
+}

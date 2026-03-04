@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +11,37 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const labrada = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Labrada-ExtraLight.woff2",
+      style: "extra-light",
+      weight: "100",
+    },
+    {
+      path: "../../public/fonts/Labrada-Light.woff2",
+      style: "light",
+      weight: "300",
+    },
+    {
+      path: "../../public/fonts/Labrada-LightItalic.woff2",
+      style: "italic",
+      weight: "300",
+    },
+    {
+      path: "../../public/fonts/Labrada-Regular.woff2",
+      style: "normal",
+      weight: "400",
+    },
+    {
+      path: "../../public/fonts/Labrada-Bold.woff2",
+      style: "bold",
+      weight: "600",
+    },
+  ],
+  variable: "--font-labrada-regular",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${labrada.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>

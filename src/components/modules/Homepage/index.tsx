@@ -10,7 +10,7 @@ interface Props {
 
 const HomePage: React.FC<Props> = ({ ...Props }) => {
   return (
-    <section className={`${styles.section}`}>
+    <section className={styles.section}>
       <CircleBackground circleCountOverride={22} circleWidth="10vw" />
       <div className={styles.headingFinesse}>
         <h1>{Props.heading}</h1>

@@ -34,7 +34,7 @@
   transform-origin: center;
   animation: spin var(--animationLength)
     steps(calc(24 * var(--animationLengthNoUnit)));
-  animation-iteration-count: 1;
+  animation-iteration-count: 0;
 }
 
 .innerCircle {
