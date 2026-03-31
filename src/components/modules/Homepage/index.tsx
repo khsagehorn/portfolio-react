@@ -8,15 +8,15 @@ interface Props {
   backgroundColorOverride?: string;
 }
 
-const HomePage: React.FC<Props> = ({ ...Props }) => {
+const HomePage: React.FC<Props> = ({ heading, subheading }) => {
   return (
     <section className={styles.section}>
       <CircleBackground circleCountOverride={22} circleWidth="10vw" />
       <div className={styles.headingFinesse}>
-        <h1>{Props.heading}</h1>
+        <h1>{heading}</h1>
       </div>
 
-      <h2>{Props.subheading}</h2>
+      <h2>{subheading}</h2>
     </section>
   );
 };

@@ -2,15 +2,6 @@
   0% {
     transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(45deg);
-  }
-  50% {
-    transform: rotate(90deg);
-  }
-  75% {
-    transform: rotate(135deg);
-  }
   100% {
     transform: rotate(180deg);
   }
@@ -25,8 +16,8 @@
   --radius: calc(
     0.5 * (1 + var(--gap)) * var(--circleWidth)/tan(0.5 * var(--baseAngle))
   ); /* circle radius */
-  --animationLength: 4s;
-  --animationLengthNoUnit: 4;
+  --animationLength: 45s;
+  --animationLengthNoUnit: 45;
   display: grid;
   width: calc(2 * var(--radius) + var(--circleWidth)); /* container size */
   max-width: 600px;
@@ -34,7 +25,7 @@
   transform-origin: center;
   animation: spin var(--animationLength)
     steps(calc(24 * var(--animationLengthNoUnit)));
-  animation-iteration-count: 0;
+  animation-iteration-count: 1;
 }
 
 .innerCircle {
@@ -46,5 +37,10 @@
   transform: rotate(var(--elementAngle)) translate(var(--radius))
     rotate(calc(-1 * var(--elementAngle)));
   border-radius: 100%;
-  background-color: #3ad;
+  background: radial-gradient(
+    circle at center,
+    rgb(199, 172, 99) 0%,
+    transparent 80%
+  );
+  opacity: 0.2;
 }

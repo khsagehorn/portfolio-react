@@ -2,10 +2,6 @@
   "siteContent": {
     "mainNav": [
       {
-        "title": "Home",
-        "link": "#home"
-      },
-      {
         "title": "Work",
         "link": "#work"
       },
@@ -21,7 +17,7 @@
     },
     "contactLinks": {
       "email": "huntersagehorn@gmail.com",
-      "linkedIn": "http://www.linedin.com/in/klaushuntersagehorn"
+      "linkedIn": "http://www.linkedin.com/in/klaushuntersagehorn"
     }
   }
 }

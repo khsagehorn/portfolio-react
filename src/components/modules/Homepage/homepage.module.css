@@ -1,5 +1,6 @@
 .section {
   font-family: var(--font-labrada-regular);
+  color: #302e29;
 
   h1 {
     text-transform: uppercase;
