@@ -12,3 +12,7 @@
     font-style: italic;
   }
 }
+
+:global(.p5Canvas) {
+  opacity: 0.5;
+}
