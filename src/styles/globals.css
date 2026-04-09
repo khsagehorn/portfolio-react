@@ -1,0 +1,29 @@
+:root {
+  --sm: 500px;
+  --md: 768px;
+  --lg: 900px;
+  --xl: 1200px;
+
+  --background: #f5efd0;
+  --foreground: #302e29;
+
+  --text-primary: #302e29;
+  --text-secondary: #666;
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  --button-secondary-border: #ebebeb;
+
+  --left-panel-max-width: 500px;
+
+  color: var(--text-primary);
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-style: italic;
+  }
+}

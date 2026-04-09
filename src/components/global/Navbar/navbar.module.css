@@ -1,0 +1,20 @@
+.linkListSection {
+  margin-left: -7.5rem;
+  margin-top: 6rem;
+  padding-left: 3.75rem;
+}
+
+.linkList {
+  border-top: 1px solid var(--text-primary);
+}
+
+.linkItem {
+  list-style: none;
+  font-family: var(--font-labrada-regular);
+  font-size: 2rem;
+  font-weight: 300;
+  /* text-shadow: 0px 0px 5px rgb(199, 172, 99); */
+  /* text-shadow: 0px 0px 15px #fff; */
+  padding: 1em 2em 1em 3.75rem;
+  border-bottom: 1px solid var(--text-primary);
+}

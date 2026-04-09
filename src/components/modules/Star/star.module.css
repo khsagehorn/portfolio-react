@@ -1,3 +1,14 @@
 .starCanvas {
+  position: absolute;
+  top: 100px;
+}
+
+:global(.p5Canvas) {
+  position: absolute;
   opacity: 0.5;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw !important;
+  height: auto !important;
+  aspect-ratio: 1;
 }

@@ -1,7 +1,3 @@
-import styles from "./homepage.module.css";
-import CircleBackground from "@/components/backgrounds/circles";
-import Star from "@/components/modules/Star";
-
 interface Props {
   heading: string;
   subheading?: string;
@@ -11,10 +7,8 @@ interface Props {
 
 const HomePage: React.FC<Props> = ({ heading, subheading }) => {
   return (
-    <section className={styles.section}>
-      <CircleBackground circleCountOverride={22} circleWidth="10vw" />
-      <Star />
-      <div className={styles.headingFinesse}>
+    <section>
+      <div>
         <h1>{heading}</h1>
       </div>
 

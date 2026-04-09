@@ -18,6 +18,7 @@
   ); /* circle radius */
   --animationLength: 45s;
   --animationLengthNoUnit: 45;
+  position: absolute;
   display: grid;
   width: calc(2 * var(--radius) + var(--circleWidth)); /* container size */
   max-width: 600px;

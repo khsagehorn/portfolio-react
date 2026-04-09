@@ -1,18 +1,10 @@
 .section {
-  font-family: var(--font-labrada-regular);
-  color: #302e29;
-
   h1 {
     text-transform: uppercase;
     font-weight: 300;
   }
 
   h2 {
-    font-weight: 300;
     font-style: italic;
   }
-}
-
-:global(.p5Canvas) {
-  opacity: 0.5;
 }
