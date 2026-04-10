@@ -35,9 +35,16 @@
 }
 
 .rightPanel {
+  width: 0;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 1;
+  transition: width var(--base-animation-length) ease-out;
+  transition-delay: var(--base-animation-length);
+}
+
+.rightPanel.contentPanelActive {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
-  z-index: 1;
 }
 
 .intro {

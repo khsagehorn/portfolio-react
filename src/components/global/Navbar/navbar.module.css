@@ -5,10 +5,15 @@
 }
 
 .linkList {
+  width: 100%;
   border-top: 1px solid var(--text-primary);
+  transition-property: width;
+  transition-duration: var(--base-animation-length);
+  transition-timing-function: var(--base-animation-timing);
 }
 
 .linkItem {
+  position: relative;
   list-style: none;
   font-family: var(--font-labrada-regular);
   font-size: 2rem;
@@ -17,4 +22,48 @@
   /* text-shadow: 0px 0px 15px #fff; */
   padding: 1em 2em 1em 3.75rem;
   border-bottom: 1px solid var(--text-primary);
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 0px;
+    background-color: var(--text-primary);
+    transform: translateY(-112px);
+    transition: height var(--base-animation-length) var(--base-animation-timing);
+    transition-delay: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    background-color: var(--text-primary);
+    transform: translateY(112px);
+    transition: height var(--base-animation-length) var(--base-animation-timing);
+    transition-delay: 0;
+  }
+}
+
+.linkListSection.active .linkItem.activeItem {
+  background-color: rgba(255, 255, 255, 0.5);
+  &::before {
+    height: 80vh;
+    transition-delay: var(--base-animation-length);
+  }
+}
+
+.linkListSection.active .linkItem.activeItem {
+  &::after {
+    height: 80vh;
+    transition-delay: var(--base-animation-length);
+  }
+}
+
+.linkListSection.active .linkList {
+  width: 500px;
 }

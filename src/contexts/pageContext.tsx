@@ -4,6 +4,8 @@ import { createContext, useContext, useState, ReactNode } from "react";
 
 interface PageContextType {
   contentPanelActive: boolean;
+  showContentPanel: () => void;
+  hideContentPanel: () => void;
   toggleActivePanel: () => void;
 }
 
@@ -16,8 +18,23 @@ export const PageContextProvider = ({ children }: { children: ReactNode }) => {
     setContentPanelActive(!contentPanelActive);
   };
 
+  const showContentPanel = () => {
+    setContentPanelActive(true);
+  };
+
+  const hideContentPanel = () => {
+    setContentPanelActive(false);
+  };
+
   return (
-    <PageContext.Provider value={{ contentPanelActive, toggleActivePanel }}>
+    <PageContext.Provider
+      value={{
+        contentPanelActive,
+        showContentPanel,
+        hideContentPanel,
+        toggleActivePanel,
+      }}
+    >
       {children}
     </PageContext.Provider>
   );

@@ -16,6 +16,12 @@
 
   --left-panel-max-width: 500px;
 
+  --base-animation-length: 200ms;
+  --base-animation-length-no-unit: 0.2;
+  --base-animation-timing: steps(
+    calc(32 * var(--base-animation-length-no-unit))
+  );
+
   color: var(--text-primary);
 
   h1 {

@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { PageContextProvider, usePageContext } from "@/contexts/pageContext";
+
 interface Props {
   heading: string;
   subheading?: string;
@@ -6,13 +9,17 @@ interface Props {
 }
 
 const HomePage: React.FC<Props> = ({ heading, subheading }) => {
+  const { hideContentPanel } = usePageContext();
+
   return (
     <section>
-      <div>
-        <h1>{heading}</h1>
-      </div>
+      <Link href={"/"} onClick={hideContentPanel}>
+        <div>
+          <h1>{heading}</h1>
+        </div>
 
-      <h2>{subheading}</h2>
+        <h2>{subheading}</h2>
+      </Link>
     </section>
   );
 };
