@@ -10,6 +10,7 @@
   transition-property: width;
   transition-duration: var(--base-animation-length);
   transition-timing-function: var(--base-animation-timing);
+  transition-delay: 0;
 }
 
 .linkItem {
@@ -66,4 +67,5 @@
 
 .linkListSection.active .linkList {
   width: 500px;
+  transition-delay: 0;
 }
